@@ -1,0 +1,104 @@
+{
+  "name": "vuerio",
+  "version": "1.0.0",
+  "description": "A Vue3 UI components for Web",
+  "private": false,
+  "main": "dist/vuerio.common.js",
+  "unpkg": "./dist/vuerio.umd.min.js",
+  "jsdelivr": "./dist/vuerio.umd.min.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": "jiyuujin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiyuujin/vuerio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiyuujin/vuerio/issues"
+  },
+  "keywords": [
+    "vue",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "npm run clean && rollup -c && npm run tsc",
+    "clean": "rm -rf dist",
+    "tsc": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
+    "lint": "eslint ./ --ext vue,ts",
+    "lint:fix": "eslint ./ --ext vue,ts --fix",
+    "test": "jest",
+    "test-cover": "jest --coverage",
+    "test:w": "npm run test-cover -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "vue": "^3.0.7"
+  },
+  "devDependencies": {
+    "@nekohack/eslint-config-vue": "^1.0.0-beta.1",
+    "@rollup/plugin-alias": "^3.1.2",
+    "@rollup/plugin-commonjs": "^13.0.2",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@storybook/addon-actions": "^6.2.0-rc.4",
+    "@storybook/addon-essentials": "^6.2.0-rc.4",
+    "@storybook/addon-links": "^6.2.0-rc.4",
+    "@storybook/vue3": "^6.2.0-rc.4",
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "@vue/compiler-sfc": "^3.0.7",
+    "@vue/test-utils": "^2.0.0-beta.7",
+    "babel-jest": "^26.6.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.19.0",
+    "jest": "^26.6.3",
+    "rollup": "^2.38.4",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^10.1.1",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5",
+    "vue-jest": "^5.0.0-alpha.8",
+    "vue-loader": "^16.1.2"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.test.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx",
+      "vue",
+      "json",
+      "node"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^~/(.*)$": "<rootDir>/src/$1"
+    },
+    "testMatch": [
+      "<rootDir>/tests/*.spec.ts?(x)"
+    ],
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules"
+    ]
+  }
+}
