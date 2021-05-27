@@ -1,6 +1,6 @@
 {
   "name": "vuerio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue3 UI components for Web",
   "private": false,
   "main": "dist/vuerio.common.js",
