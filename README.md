@@ -1,19 +1,9 @@
-<div align="center">
-  <h1>vuerio</h1>
-</div>
+# vuerio
 
-<p align="center">
+<p align="left">
   <a href="https://npmjs.com/package/vuerio">
     <img alt="" src="https://img.shields.io/npm/v/vuerio/latest.svg?style=flat-square">
   </a>
-  <!--
-  <a href="https://npmjs.com/package/vuerio">
-    <img alt="" src="https://img.shields.io/npm/v/vuerio/alpha.svg?style=flat-square">
-  </a>
-  <a href="https://npmjs.com/package/vuerio">
-    <img alt="" src="https://img.shields.io/npm/v/vuerio/beta.svg?style=flat-square">
-  </a>
-  -->
   <a href="https://npmjs.com/package/vuerio">
     <img alt="" src="https://img.shields.io/npm/dt/vuerio.svg?style=flat-square">
   </a>
