@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## `v1.1.0`
+
+### [update]
+Update for Jest to v27
+
 ## `v1.0.1`
 
 ### [update]
