@@ -1,9 +1,14 @@
 # CHANGELOG
 
+## `v1.1.1`
+
+### [update]
+Update changelog
+
 ## `v1.1.0`
 
 ### [update]
-Update for Jest to v27
+Update for Storybook to v6.2
 
 ## `v1.0.1`
 
