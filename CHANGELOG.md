@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## `v1.2.0`
+
+### [update]
+Update for Rollup plugins
+
 ## `v1.1.1`
 
 ### [update]
