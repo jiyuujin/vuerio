@@ -3,9 +3,6 @@
 ## `v1.3.0`
 - Update plugins
 
-#### Major update
-- sass-loader
-
 #### Vue plugins
 - @vue/compiler-sfc
 - @vue/test-utils
