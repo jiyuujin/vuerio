@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## `v1.3.0`
+- Update plugins
+
+#### Major update
+- sass-loader
+
+#### Vue plugins
+- @vue/compiler-sfc
+- @vue/test-utils
+- vue
+- vue-jest
+- vue-loader
+
+#### Storybook plugins
+- @storybook/addon-actions
+- @storybook/addon-essentials
+- @storybook/addon-links
+- @storybook/vue3
+- @types/jest
+- @typescript-eslint/eslint-plugin
+- @typescript-eslint/parser
+- eslint
+
+#### Jest plugins
+- babel-jest
+- jest
+- ts-jest
+
+#### Rollup plugins
+- rollup
+
+#### Other plugins
+- sass
+- typescript
+
 ## `v1.2.0`
 
 ### [update]
