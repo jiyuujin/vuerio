@@ -35,23 +35,20 @@ import 'vuerio/dist/vuerio.common.css'
 import { JButton } from 'vuerio'
 
 export default {
-  components: { JButton }
+  components: { JButton },
 }
 ```
 
 ```html
-<j-button
-    text="Add"
-    @handleClick=""
-/>
+<j-button text="Add" @handleClick="" />
 ```
 
 #### Props
 
-| # | Type | Default |
-|:---|:---|:---|
-| id | `String` | `` |
-| text | `String` | `` |
+| #    | Type     | Default |
+| :--- | :------- | :------ |
+| id   | `String` | ``      |
+| text | `String` | ``      |
 
 ### Input
 
@@ -59,28 +56,23 @@ export default {
 import { JInput } from 'vuerio'
 
 export default {
-  components: { JInput }
+  components: { JInput },
 }
 ```
 
 ```html
-<j-input
-    placeholder="Please input text"
-    text="Test"
-    width="180px"
-    @handleInput=""
-/>
+<j-input placeholder="Please input text" text="Test" width="180px" @handleInput="" />
 ```
 
 #### Props
 
-| # | Type | Default |
-|:---|:---|:---|
-| id | `String` | `` |
-| label | `String` | `` |
-| explain | `String` | `` |
-| placeholder | `String` | `` |
-| text | `String` | `` |
+| #           | Type     | Default |
+| :---------- | :------- | :------ |
+| id          | `String` | ``      |
+| label       | `String` | ``      |
+| explain     | `String` | ``      |
+| placeholder | `String` | ``      |
+| text        | `String` | ``      |
 
 ### Label
 
@@ -88,7 +80,7 @@ export default {
 import { JLabel } from 'vuerio'
 
 export default {
-  components: { JLabel }
+  components: { JLabel },
 }
 ```
 
@@ -98,9 +90,9 @@ export default {
 
 #### Props
 
-| # | Type | Default |
-|:---|:---|:---|
-| text | `String` | `` |
+| #    | Type     | Default |
+| :--- | :------- | :------ |
+| text | `String` | ``      |
 
 ### Select
 
@@ -108,24 +100,24 @@ export default {
 import { JSelect } from 'vuerio'
 
 export default {
-  components: { JSelect }
+  components: { JSelect },
 }
 ```
 
 ```html
 <j-select
-    :options="[{text: 0, value: 'abc'}, {text: 1, value: 'def'}, {text: 2, value: 'ghi'}]"
-    :values="0"
-    @handleClick=""
+  :options="[{text: 0, value: 'abc'}, {text: 1, value: 'def'}, {text: 2, value: 'ghi'}]"
+  :values="0"
+  @handleClick=""
 />
 ```
 
 #### Props
 
-| # | Type | Default |
-|:---|:---|:---|
-| id | `String` | `` |
-| label | `String` | `` |
-| explain | `String` | `` |
+| #       | Type                                     | Default                             |
+| :------ | :--------------------------------------- | :---------------------------------- |
+| id      | `String`                                 | ``                                  |
+| label   | `String`                                 | ``                                  |
+| explain | `String`                                 | ``                                  |
 | options | `Array<{ value: Number, text: String }>` | `[{ value: Number, text: String }]` |
-| values | `Number` | `null` |
+| values  | `Number`                                 | `null`                              |

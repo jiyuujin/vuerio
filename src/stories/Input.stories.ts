@@ -9,8 +9,8 @@ export default {
     label: { control: 'string' },
     explain: { control: 'string' },
     placeholder: { control: 'string' },
-    text: { control: 'string' }
-  }
+    text: { control: 'string' },
+  },
 }
 
 const Template = (args) => ({
@@ -18,7 +18,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<j-input v-bind="args" />'
+  template: '<j-input v-bind="args" />',
 })
 
 export const Primary = Template.bind({})
@@ -27,5 +27,5 @@ Primary.args = {
   role: 'textbox',
   label: 'input',
   explain: 'Input Form',
-  text: 'Input'
+  text: 'Input',
 }

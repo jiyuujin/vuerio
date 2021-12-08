@@ -5,8 +5,8 @@ export default {
   component: JButton,
   argTypes: {
     id: { control: 'string' },
-    text: { control: 'string' }
-  }
+    text: { control: 'string' },
+  },
 }
 
 const Template = (args) => ({
@@ -14,11 +14,11 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<j-button v-bind="args" />'
+  template: '<j-button v-bind="args" />',
 })
 
 export const Primary = Template.bind({})
 Primary.args = {
   id: 'custom-button',
-  text: 'Button'
+  text: 'Button',
 }

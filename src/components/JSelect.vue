@@ -8,11 +8,7 @@
       class="atoms-select"
       @input="update"
     >
-      <option
-        v-for="option in options"
-        :key="option.value"
-        :value="option.value"
-      >
+      <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
       </option>
     </select>

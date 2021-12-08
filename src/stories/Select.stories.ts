@@ -5,7 +5,7 @@ const SELECT_MENU = [
   { value: 2, text: 'def' },
   { value: 3, text: 'ghi' },
   { value: 4, text: 'jkl' },
-  { value: 5, text: 'mno' }
+  { value: 5, text: 'mno' },
 ]
 
 export default {
@@ -18,16 +18,16 @@ export default {
     options: {
       control: {
         type: 'select',
-        options: SELECT_MENU
-      }
+        options: SELECT_MENU,
+      },
     },
     values: {
       control: {
         type: 'select',
-        options: [0]
-      }
-    }
-  }
+        options: [0],
+      },
+    },
+  },
 }
 
 const Template = (args) => ({
@@ -35,7 +35,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<j-select v-bind="args" />'
+  template: '<j-select v-bind="args" />',
 })
 
 export const Primary = Template.bind({})
@@ -44,5 +44,5 @@ Primary.args = {
   label: 'select',
   explain: 'Select Form',
   options: SELECT_MENU,
-  values: [0]
+  values: [0],
 }
