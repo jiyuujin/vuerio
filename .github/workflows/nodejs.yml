@@ -1,12 +1,12 @@
 name: Node.js CI
 
 on:
-  push:
-    branches:
-      - dev
+  #  push:
+  #    branches:
+  #      - main
   pull_request:
     branches:
-      - dev
+      - main
 
 jobs:
   build:
@@ -14,20 +14,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Use Node.js
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '14.x'
 
       - name: Cache node modules
         uses: actions/cache@v2
         env:
-          cache-name: _cache_npm_node12
+          cache-name: _cache_npm_node14
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
@@ -40,5 +40,19 @@ jobs:
         run: |
           npm install
           npm run test
+        env:
+          CI: true
+
+      - name: Transpile
+        run: |
+          npm install
+          npm run build-storybook
+        env:
+          CI: true
+
+      - name: Lib & esm
+        run: |
+          npm install
+          npm run build
         env:
           CI: true

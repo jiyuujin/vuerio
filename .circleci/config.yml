@@ -1,0 +1,46 @@
+version: 2.1
+
+executors:
+  default:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:14
+
+commands:
+  prepare_node_dependency:
+    description: Prepare
+    steps:
+      - checkout
+
+      - run: sudo apt-get update && sudo apt-get install -y nasm autoconf automake libtool dpkg libpng-dev g++
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn build
+
+jobs:
+  master_build:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - prepare_node_dependency
+
+workflows:
+  version: 2
+  push:
+    jobs:
+      - master_build:
+          filters:
+            branches:
+              only: main
